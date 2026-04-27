@@ -1,6 +1,8 @@
-from flask_cors import Flask, jsonify
+from flask import Flask, jsonify
 from flask_cors import CORS
 import os
+
+
 app = Flask(__name__)
 CORS(app)
 
@@ -25,7 +27,7 @@ def health_check():
 # Запуск приложения
 if __name__ == '__main__':
     # Создаем папку для данных, если её нет
-if not os.path.exists('data'):
+    if not os.path.exists('data'):
         os.makedirs('data')
         print("Создана папка 'data'")
 
