@@ -9,6 +9,8 @@ venv/
 env/
 .env
 .venv/
+.idea
+.idea/
 
 #Системные файлы
 Thumbs.db
