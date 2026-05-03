@@ -1,0 +1,16 @@
+from apiflask import APIFlask
+from backend.api.routes import register_routes
+
+app = APIFlask(
+    __name__,
+    title="backend API",
+    version="1.0.0",
+    docs_path="/docs",
+)
+
+app.config["SYNS_LOCAL_SPEC"] = False
+
+register_routes(app)
+
+if __name__ == "__main__":
+    app.run(port=5001, debug=True)
